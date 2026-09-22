@@ -1,0 +1,11 @@
+#Generated files
+output/*.json
+
+#runtime los
+logs/*.log
+
+#VS Code
+.vscode/
+
+#Linux temp files
+*.swp
