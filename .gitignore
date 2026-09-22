@@ -1,7 +1,7 @@
 #Generated files
 output/*.json
 
-#runtime los
+#runtime logs
 logs/*.log
 
 #VS Code

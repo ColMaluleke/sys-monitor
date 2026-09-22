@@ -5,6 +5,9 @@ get_disk_usage() {
         gsub(/%/, "", $5)
         print $5
     }'
+if [ "$disk_usage" -gt 70 ]; then
+    echo "Warning: Disk usage is above 70%!"
+fi
 }
 
 ##RAM Usage
@@ -13,6 +16,9 @@ get_ram_usage() {
     /Mem:/ {
         printf("%.0f", ($3/$2)*100)
     }'
+if [ "$ram_usage" -gt 70 ]; then
+    echo "Warning: RAM usage is above 70%!"
+fi
 }
 
 ##Failed SSH Login Attempts
